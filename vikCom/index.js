@@ -2,6 +2,8 @@ const express = require("express");
 const app = new express();
 const port = 8000;
 //to get express framework on port no 8000
+const dotenv = require("dotenv");
+dotenv.config();
 const session = require("express-session");
 
 const password = require("passport");
@@ -10,8 +12,7 @@ const passportLocal = require("./config/passport-local-strategy");
 const passportJWT = require("./config/passport-jwt-strategy");
 
 const cookieParser = require("cookie-parser");
-const dotenv = require("dotenv");
-dotenv.config();
+
 const db = require("./config/mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const passport = require("passport");
