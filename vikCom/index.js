@@ -1,6 +1,6 @@
 const express = require("express");
 const app = new express();
-const port = 8000;
+const port =  process.env.PORT || 8000;
 //to get express framework on port no 8000
 const dotenv = require("dotenv");
 dotenv.config();
